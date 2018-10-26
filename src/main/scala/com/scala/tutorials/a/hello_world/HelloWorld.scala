@@ -1,4 +1,4 @@
-package com.scala.tutorials.a.hello.world
+package com.scala.tutorials.a.hello_world
 
 /**
   * Created by Ghazi Naceur on 23/10/2018.

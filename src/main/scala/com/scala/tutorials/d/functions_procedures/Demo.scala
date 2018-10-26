@@ -1,4 +1,4 @@
-package com.scala.tutorials.d.functions.procedures
+package com.scala.tutorials.d.functions_procedures
 
 /**
   * Created by Ghazi Naceur on 25/10/2018.

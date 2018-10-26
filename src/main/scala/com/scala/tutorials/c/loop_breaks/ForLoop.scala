@@ -1,4 +1,4 @@
-package com.scala.tutorials.c.loop.breaks
+package com.scala.tutorials.c.loop_breaks
 
 /**
   * Created by Ghazi Naceur on 25/10/2018.
