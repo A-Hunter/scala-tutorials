@@ -1,4 +1,4 @@
-package com.scala.tutorials.c.loop_breaks
+package com.scala.tutorials.c.loop.a.breaks
 
 import scala.util.control.Breaks
 
