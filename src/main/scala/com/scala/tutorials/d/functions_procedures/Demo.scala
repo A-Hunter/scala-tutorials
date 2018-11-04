@@ -13,8 +13,12 @@ object Demo {
   def addInt(a: Int, b: Int): Int = {
     var sum: Int = 0
     sum = a + b
-
-    return sum
+    sum
+    // We can write :
+    // sum
+    //  or
+    // return sum
+    // The "return" keyword is not compulsory
   }
 
   // procedure
