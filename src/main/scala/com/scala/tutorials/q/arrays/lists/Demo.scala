@@ -54,7 +54,10 @@ object Demo {
     val mul = List.tabulate( 4,5 )( _ * _ )
     println( "mul : " + mul  )
 
-
+    val sum = numbers.reduce(_+_) // equivalent to "sum"
+    val sum2 = numbers.sum // equivalent to "sum"
+    println("The sum of 1+2+3+4 = " + sum)
+    println("The sum of 1+2+3+4 = " + sum2)
 
     println( "Before reverse fruit : " + fruit )
     println( "After reverse fruit : " + fruit.reverse )
