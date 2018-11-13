@@ -11,6 +11,8 @@ object Collection extends App {
 
   val strings = ListBuffer[String]()
 
+  var total = 0
+
   strings += "one"
   strings += "two"
   strings += "three"
@@ -23,5 +25,19 @@ object Collection extends App {
   println(strings.toList.head)
   println(strings.toList.tail)
 
+  for (i <- numbers){
+    total += i
+  }
+  println("Total = " + total)
 
+  // Range
+  val integers = List.range(1,10)
+  integers.foreach(i => println(i))
+
+  val integersWithStep = List.range(1,10,3)
+  integersWithStep.foreach(i => println(i))
+
+  // Fill
+  val dup = List.fill(3)("Hello")
+  println(dup)
 }
