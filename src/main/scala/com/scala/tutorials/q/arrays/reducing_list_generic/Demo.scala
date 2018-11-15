@@ -15,12 +15,12 @@ object Demo extends App {
   println(numbers.fold(0)((x, y) => x + y))
   println(numbers.sum)
 
-  println(ints.foldLeft(0)(_ - _)) // 0-4-7
-  println(ints.foldRight(0)(_ - _)) // 4-7
+  println(ints.foldLeft(0)(_ - _))
+  println(ints.foldRight(0)(_ - _))
   println(ints.foldRight(0)((x, y) => {
     println(x)
     println(y)
     println("println(x-y)" + (x-y))
     x - y
-  })) // 4-7
+  }))
 }
