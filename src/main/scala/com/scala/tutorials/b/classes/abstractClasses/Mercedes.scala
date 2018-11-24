@@ -1,0 +1,11 @@
+package com.scala.tutorials.b.classes.abstractClasses
+
+/**
+  * Created by Ghazi Naceur on 24/11/2018.
+  */
+class Mercedes extends Car {
+  override val year: Int = 2015
+  override val automatic: Boolean = true
+
+  override def color: String = "Grey"
+}
