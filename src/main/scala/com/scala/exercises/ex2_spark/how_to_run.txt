@@ -1,0 +1,3 @@
+1- move to df.scala
+2- run spark-shell
+3- run :load df.scala
