@@ -1,4 +1,4 @@
-package com.scala.execises.ex1
+package com.scala.exercises.ex1
 
 import scala.util.control.Breaks
 
