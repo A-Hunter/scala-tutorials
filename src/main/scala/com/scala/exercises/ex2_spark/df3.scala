@@ -14,3 +14,26 @@ val result = df.filter("id > 100 AND salary > 3000.0").collect()
 
 // Count result
 val count = df.filter("id > 100 AND salary > 3000.0").count()
+
+df.printSchema()
+
+df.show()
+
+// mean() is one of the aggregate functions : Taking the average/mean from any numerical column
+df.groupBy("country").mean().show()
+df.groupBy("country").max().show()
+df.groupBy("country").min().show()
+df.groupBy("country").sum().show()
+
+
+df.select(countDistinct("salary")).show()
+df.select(sumDistinct("salary")).show()
+df.select(variance("salary")).show()
+df.select(stddev("salary")).show()
+df.select(collect_set("salary")).show()
+
+// Order is ASC by default
+df.orderBy("salary").show()
+
+// Desc Order
+df.orderBy($"salary".desc).show()
