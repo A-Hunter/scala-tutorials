@@ -7,7 +7,7 @@ import org.apache.spark.sql.SparkSession
 
 val spark = SparkSession.builder().getOrCreate()
 
-val df = spark.read.option("header","true").option("inferSchema","true").csv("E:\\GitHubRepositories\\scala-tutorials\\src\\main\\resources\\MOCK_DATA.csv")
+val df = spark.read.option("header","true").option("inferSchema","true").csv("D:\\github-projects\\scala-tutorials\\src\\main\\resources\\MOCK_DATA.csv")
 // option("header","true") ==> to consider the first line as a header
 // option("inferSchema","true") ==> to cast fields from String to its real type : int, double ...
 

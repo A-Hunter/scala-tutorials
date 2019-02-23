@@ -5,7 +5,7 @@
 import org.apache.spark.sql.SparkSession
 
 val spark = SparkSession.builder().getOrCreate()
-val df = spark.read.option("header", "true").option("inferSchema", "true").csv("E:\\GitHubRepositories\\scala-tutorials\\src\\main\\resources\\infos.csv")
+val df = spark.read.option("header", "true").option("inferSchema", "true").csv("D:\\github-projects\\scala-tutorials\\src\\main\\resources\\infos.csv")
 df.printSchema()
 
 // Creating a new column, that represents the addition of 2 existing columns (2 integers)

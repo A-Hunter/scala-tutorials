@@ -27,11 +27,11 @@ object Demo extends App {
   println(ints.scan(0)(_ - _))
   println(ints.scanLeft(0)(_ - _))
   println(ints.scanRight(0)(_ - _))
-  //  println(ints.scanRight(0)((x, y) => {
-  //    println(x)
-  //    println(y)
-  //    println("println(x-y)" + (x-y))
-  //    x - y
-  //  }))
+    println(ints.scanRight(0)((x, y) => {
+      println(x)
+      println(y)
+      println("println(x-y)" + (x-y))
+      x - y
+    }))
 
 }

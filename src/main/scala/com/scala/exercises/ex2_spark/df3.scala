@@ -5,7 +5,7 @@
 import org.apache.spark.sql.SparkSession
 
 val spark = SparkSession.builder().getOrCreate()
-val df = spark.read.option("header", "true").option("inferSchema", "true").csv("E:\\GitHubRepositories\\scala-tutorials\\src\\main\\resources\\infos.csv")
+val df = spark.read.option("header", "true").option("inferSchema", "true").csv("D:\\github-projects\\scala-tutorials\\src\\main\\resources\\infos.csv")
 
 df.filter("id > 100 AND salary > 3000.0").show()
 
@@ -20,10 +20,10 @@ df.printSchema()
 df.show()
 
 // mean() is one of the aggregate functions : Taking the average/mean from any numerical column
-df.groupBy("country").mean().show()
-df.groupBy("country").max().show()
-df.groupBy("country").min().show()
-df.groupBy("country").sum().show()
+df.groupBy("last_name").mean().show()
+df.groupBy("last_name").max().show()
+df.groupBy("last_name").min().show()
+df.groupBy("last_name").sum().show()
 
 
 df.select(countDistinct("salary")).show()
