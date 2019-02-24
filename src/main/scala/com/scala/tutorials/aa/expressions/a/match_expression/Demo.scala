@@ -9,11 +9,12 @@ package com.scala.tutorials.aa.expressions.a.match_expression
   */
 object Demo {
 
-  def main(args: Array[String]){
+  def main(args: Array[String]) {
 
-    val day:String = "Mondakjy"
+    val day: String = "Mondakjy"
 
-    val week: Unit = day match{
+    // Unit is equivalent to 'void' in Java
+    val week: Unit = day match {
       case "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" =>
         "Work"
         println("Work")
@@ -25,9 +26,9 @@ object Demo {
       case other =>
         println("The provided input is not a day")
 
-        //  We can write as well
-//      case _ =>
-//        println("a wildcard value")
+      //  We can write as well
+      //      case _ =>
+      //        println("a wildcard value")
     }
   }
 

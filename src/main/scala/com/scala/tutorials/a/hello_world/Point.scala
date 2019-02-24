@@ -4,15 +4,11 @@ package com.scala.tutorials.a.hello_world
   * Created by Ghazi Naceur on 24/10/2018.
   */
 
-class Coordination(val dx: Int, val dy: Int){
-  var x: Int = dx
-  var y: Int = dy
+class Coordination() {
 
-  def locate(lx:Int, ly:Int){
-    x = lx
-    y = ly
-    println("first coordination : " + x)
-    println("second coordination : " + y)
+  def locate(lx: Int, ly: Int) {
+    println("first coordination : " + lx)
+    println("second coordination : " + ly)
   }
 }
 
@@ -29,16 +25,17 @@ class Point(val xc: Int, val yc: Int) {
 }
 
 class Location(override val xc: Int, override val yc: Int,
-               val zc :Int) extends Point(xc, yc){
+               val zc: Int) extends Point(xc, yc) {
 
   var z: Int = zc
+
   def move(dx: Int, dy: Int, dz: Int) {
     x = x + dx
     y = y + dy
     z = z + dz
-    println ("Point x location : " + x)
-    println ("Point y location : " + y)
-    println ("Point z location : " + z)
+    println("Point x location : " + x)
+    println("Point y location : " + y)
+    println("Point z location : " + z)
   }
 
 }
@@ -52,8 +49,8 @@ object Demo {
     val loc = new Location(10, 20, 15)
     loc.move(10, 10, 5)
 
-    val coord = new Coordination(40, 50)
-    coord.locate(40,50)
+    val coord = new Coordination()
+    coord.locate(40, 50)
   }
 }
 
