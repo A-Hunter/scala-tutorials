@@ -12,10 +12,10 @@ package com.scala.tutorials.l.higher_order_functions
   */
 object Demo {
   def main(args: Array[String]) {
-    println( apply( layout, 10) )
+    println(apply(layout, 10))
   }
 
-  def apply(f: Int => String, v: Int) = f(v)
+  def apply(f: Int => String, v: Int): String = f(v)
 
-  def layout[A](x: A) = "[" + x.toString() + "]"
+  def layout[A](x: A): String = "[" + x.toString + "]"
 }

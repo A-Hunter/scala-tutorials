@@ -11,7 +11,7 @@ package com.scala.tutorials.k.recursion_functions
 object Demo {
   def main(args: Array[String]) {
     for (i <- 1 to 10)
-      println( "Factorial of " + i + ": = " + factorial(i) )
+      println("Factorial of " + i + ": = " + factorial(i))
   }
 
   def factorial(n: BigInt): BigInt = {
