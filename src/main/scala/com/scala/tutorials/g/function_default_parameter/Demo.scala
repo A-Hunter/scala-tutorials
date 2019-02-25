@@ -9,7 +9,7 @@ object Demo {
     println("Returned Value : " + addInt())
   }
 
-  def addInt(a:Int = 5, b:Int = 7) : Int = {
+  def addInt(a: Int = 5, b: Int = 7): Int = {
     var sum: Int = 0
     sum = a + b
 

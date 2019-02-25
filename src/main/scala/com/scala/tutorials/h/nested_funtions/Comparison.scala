@@ -11,7 +11,7 @@ object Comparison {
     println(average(3, 4, 5))
   }
 
-  def minimum(x: Int, y: Int, z: Int): Int ={
+  def minimum(x: Int, y: Int, z: Int): Int = {
     def min(i: Int, j: Int): Int = {
       if (i < j) {
         i
@@ -19,26 +19,29 @@ object Comparison {
         j
       }
     }
-    min(x, min(y,z))
+
+    min(x, min(y, z))
   }
 
 
-  def maximum(x:Int, y:Int, z:Int): Int ={
-    def max(i:Int, j:Int): Int ={
-      if (i > j){
+  def maximum(x: Int, y: Int, z: Int): Int = {
+    def max(i: Int, j: Int): Int = {
+      if (i > j) {
         i
       } else {
         j
       }
     }
+
     max(x, max(y, z))
   }
 
-  def average(x:Int, y:Int, z:Int): Int ={
-    def sum(i:Int, j:Int): Int ={
-      i+j
+  def average(x: Int, y: Int, z: Int): Int = {
+    def sum(i: Int, j: Int): Int = {
+      i + j
     }
-    sum(x, sum(y,z))/3
+
+    sum(x, sum(y, z)) / 3
   }
 
 

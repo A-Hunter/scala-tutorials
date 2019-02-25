@@ -22,7 +22,7 @@ object Demo {
   }
 
   // procedure
-  def printMe( ) : Unit = {
+  def printMe(): Unit = {
     println("Hello, Scala!")
   }
 }

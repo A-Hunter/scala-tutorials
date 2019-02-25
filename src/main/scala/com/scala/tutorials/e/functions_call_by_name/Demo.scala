@@ -21,11 +21,12 @@ object Demo {
   }
 
   def time() = {
-    println("Getting time in nano seconds")
-    System.nanoTime
+    println("Getting time in nano seconds") // 2nd to be executed
+    System.nanoTime // 3rd to be executed
   }
+
   def delayed(t: => Long) = {
-    println("In delayed method")
-    println("Param: " + t)
+    println("In delayed method") // 1st to be executed
+    println("Param: " + t) // 4th to be executed
   }
 }
