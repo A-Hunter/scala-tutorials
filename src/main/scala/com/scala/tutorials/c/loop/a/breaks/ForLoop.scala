@@ -5,8 +5,8 @@ package com.scala.tutorials.c.loop.a.breaks
   */
 object ForLoop {
   def main(args: Array[String]) {
-    var a = 0
 
+    var a = 0
 
     for (a <- 1 until 10) yield println(a)
 

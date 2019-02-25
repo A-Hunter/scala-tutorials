@@ -26,7 +26,7 @@ object Demo {
       case other =>
         println("The provided input is not a day")
 
-      //  We can write as well
+      //  We replace "other" by "_"
       //      case _ =>
       //        println("a wildcard value")
     }

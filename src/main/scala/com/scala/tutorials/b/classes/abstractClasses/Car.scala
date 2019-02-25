@@ -7,5 +7,6 @@ abstract class Car {
 
   val year: Int
   val automatic: Boolean
+
   def color: String
 }

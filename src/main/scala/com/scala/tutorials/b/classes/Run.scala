@@ -24,10 +24,13 @@ object Run {
       def loop(current: Int): Unit =
 
         if (current > 0) {
+          println("current : "+current)
+//          println("f : " +f)
           f
           loop(current - 1)
         }
 
+      println("x : "+x)
       loop(x)
     }
   }

@@ -6,13 +6,9 @@ package com.scala.tutorials.b.classes.abstractClasses
 object Main {
 
   def main(args: Array[String]): Unit = {
-    val mercedes = new Mercedes
-    val audi = new Audi
-    val bmw = new BMW
-
-    val cars = List(mercedes,audi,bmw)
-    cars.foreach(x=>{
-      println(x.getClass)
+    val cars = List(new Mercedes, new Audi, new BMW)
+    cars.foreach(x => {
+      println(">>> " + x.getClass.getSimpleName)
       println(x.year)
       println(x.automatic)
       println(x.color)
