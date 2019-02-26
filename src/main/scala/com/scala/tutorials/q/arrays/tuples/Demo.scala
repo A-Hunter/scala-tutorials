@@ -14,16 +14,16 @@ package com.scala.tutorials.q.arrays.tuples
 object Demo {
   def main(args: Array[String]) {
 
-    val t = (4,3,2,1)
+    val t = (4, 3, 2, 1)
     val sum = t._1 + t._2 + t._3 + t._4
-    println( "Sum of elements: "  + sum )
+    println("Sum of elements: " + sum)
 
-    t.productIterator.foreach{ i =>println("Value = " + i )}
+    t.productIterator.foreach { i => println("Value = " + i) }
 
     val tup = new Tuple3(1, "hello", Console)
-    println("Concatenated String: " + tup.toString() )
+    println("Concatenated String: " + tup.toString())
 
     val tuple = new Tuple2("Scala", "hello")
-    println("Swapped Tuple: " + tuple.swap )
+    println("Swapped Tuple: " + tuple.swap)
   }
 }

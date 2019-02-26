@@ -5,8 +5,8 @@ package com.scala.tutorials.q.arrays.reducing_list_generic
   */
 object Demo extends App {
 
-  val numbers = List(1,2,3)
-  val ints = List(4,7,1,8,5)
+  val numbers = List(1, 2, 3)
+  val ints = List(4, 7, 1, 8, 5)
 
   println(numbers.fold(0)(_ + _))
   // 0 is the starting value
@@ -15,12 +15,15 @@ object Demo extends App {
   println(numbers.fold(0)((x, y) => x + y))
   println(numbers.sum)
 
+  // 0-4-7-1-8-5
   println(ints.foldLeft(0)(_ - _))
+  //(4-(7-(1-(8-(5-0)))))
   println(ints.foldRight(0)(_ - _))
+  // Demo :
   println(ints.foldRight(0)((x, y) => {
     println(x)
     println(y)
-    println("println(x-y)" + (x-y))
+    println("println(x-y) : " + (x - y))
     x - y
   }))
 }

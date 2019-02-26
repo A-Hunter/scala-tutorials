@@ -8,11 +8,10 @@ object Demo {
     val fruit = "apples" :: ("oranges" :: ("pears" :: Nil))
     val nums = Nil
 
-    println( "Head of fruit : " + fruit.head )
-    println( "Tail of fruit : " + fruit.tail )
-    println( "Check if fruit is empty : " + fruit.isEmpty )
-    println( "Check if nums is empty : " + nums.isEmpty )
-
+    println("Head of fruit : " + fruit.head)
+    println("Tail of fruit : " + fruit.tail)
+    println("Check if fruit is empty : " + fruit.isEmpty)
+    println("Check if nums is empty : " + nums.isEmpty)
 
     // List of Integers
     val numbers: List[Int] = List(1, 2, 3, 4)
@@ -41,25 +40,24 @@ object Demo {
 
 
     val fr = List.fill(3)("apples") // Repeats apples three times.
-    println( "fruit : " + fr  )
+    println("fruit : " + fr)
 
-    val num = List.fill(10)(2)         // Repeats 2, 10 times.
-    println( "num : " + num  )
+    val num = List.fill(10)(2) // Repeats 2, 10 times.
+    println("num : " + num)
 
-
-    // Creates 5 elements using the given function.
+    // Creates 6 elements using the given function.
     val squares = List.tabulate(6)(n => n * n)
-    println( "squares : " + squares  )
+    println("squares : " + squares)
 
-    val mul = List.tabulate( 4,5 )( _ * _ )
-    println( "mul : " + mul  )
+    val mul = List.tabulate(4, 5)(_ * _)
+    println("mul : " + mul)
 
-    val sum = numbers.reduce(_+_) // equivalent to "sum"
+    val sum = numbers.reduce(_ + _) // equivalent to "sum"
     val sum2 = numbers.sum // equivalent to "sum"
     println("The sum of 1+2+3+4 = " + sum)
     println("The sum of 1+2+3+4 = " + sum2)
 
-    println( "Before reverse fruit : " + fruit )
-    println( "After reverse fruit : " + fruit.reverse )
+    println("Before reverse fruit : " + fruit)
+    println("After reverse fruit : " + fruit.reverse)
   }
 }

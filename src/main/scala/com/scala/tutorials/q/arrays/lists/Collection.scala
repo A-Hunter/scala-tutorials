@@ -7,10 +7,8 @@ import scala.collection.mutable.ListBuffer
   */
 object Collection extends App {
 
-  val numbers = List(12,23,45,56,78,89)
-
+  val numbers = List(12, 23, 45, 56, 78, 89)
   val strings = ListBuffer[String]()
-
   var total = 0
 
   strings += "one"
@@ -25,16 +23,16 @@ object Collection extends App {
   println(strings.toList.head)
   println(strings.toList.tail)
 
-  for (i <- numbers){
+  for (i <- numbers) {
     total += i
   }
   println("Total = " + total)
 
   // Range
-  val integers = List.range(1,10)
+  val integers = List.range(1, 10)
   integers.foreach(i => println(i))
 
-  val integersWithStep = List.range(1,10,3)
+  val integersWithStep = List.range(1, 10, 3)
   integersWithStep.foreach(i => println(i))
 
   // Fill

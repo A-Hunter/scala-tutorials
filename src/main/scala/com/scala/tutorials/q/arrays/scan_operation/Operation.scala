@@ -5,12 +5,12 @@ package com.scala.tutorials.q.arrays.scan_operation
   */
 object Operation extends App {
 
-  val divide = (x: Double, y: Double) =>{
-    val result = x/y
+  val divide = (x: Double, y: Double) => {
+    val result = x / y
     result
   }
 
-  val a = List(1.0,2.0,3.0)
+  val a = List(1.0, 2.0, 3.0)
 
   println(a.reduceLeft(divide))
   println(a.reduceLeftOption(divide))
@@ -19,20 +19,20 @@ object Operation extends App {
 
 
   val product = (x: Int, y: Int) => {
-    val result = x*y
+    val result = x * y
     result
   }
 
-  val b = Array(1,2,3)
+  val b = Array(1, 2, 3)
 
   val arr = b.scanLeft(10)(product)
-  arr.foreach(a=>println(a))
+  arr.foreach(a => println(a))
   println("*****")
   val abb = b.scanRight(10)(product)
-  abb.foreach(a=> println(a))
+  abb.foreach(a => println(a))
   println("*****")
 
-  val c = Array(1,2,3)
+  val c = Array(1, 2, 3)
   println(c.foldLeft(1)(product))
   println(c.foldRight(1)(product))
 }
