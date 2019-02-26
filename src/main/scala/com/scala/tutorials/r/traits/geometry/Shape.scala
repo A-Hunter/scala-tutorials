@@ -6,6 +6,8 @@ package com.scala.tutorials.r.traits.geometry
 trait Shape {
 
   def area: Int
+
   def name: String
+
   final def parentName: String = "Shape" // Can't be overridden
 }

@@ -1,8 +1,6 @@
 package com.scala.tutorials.u.exception_handling
 
-import java.io.FileReader
-import java.io.FileNotFoundException
-import java.io.IOException
+import java.io.{FileNotFoundException, FileReader, IOException}
 
 /**
   * Created by Ghazi Naceur on 27/10/2018.

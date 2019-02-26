@@ -8,9 +8,9 @@ import scala.io.Source
 
 object Demo3 {
   def main(args: Array[String]) {
-    println("Following is the content read:" )
+    println("Following is the content read:")
 
-    Source.fromFile("path-to-file\\test.txt" ).foreach {
+    Source.fromFile("test.txt").foreach {
       print
     }
   }

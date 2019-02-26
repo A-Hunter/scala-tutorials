@@ -6,7 +6,7 @@ package com.scala.tutorials.r.traits.geometry
 class RightAngleTriangle(adjacent: Int, opposite: Int) extends Triangle {
   override def isRightAngle: Boolean = true
 
-  override def area: Int = (adjacent * opposite)/2
+  override def area: Int = (adjacent * opposite) / 2
 
   override def name: String = "Right Angle Triangle"
 }

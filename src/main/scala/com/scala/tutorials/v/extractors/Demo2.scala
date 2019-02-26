@@ -16,16 +16,23 @@ package com.scala.tutorials.v.extractors
   */
 object Demo2 {
   def main(args: Array[String]) {
+    // Demo2(5) : When an instance of a class is followed by parentheses with a list of zero or more
+    //  parameters, the compiler invokes the apply method on that instance.
     val x = Demo2(5)
     println(x)
 
     x match {
-      case Demo2(num) => println(x+" is bigger two times than "+num)
+        // Demo2(num) : When comparing an
+      //     extractor object using the match statement the unapply method will be automatically
+      //     executed.
+      case Demo2(num) => println(x + " is bigger two times than " + num)
 
       //unapply is invoked
       case _ => println("i cannot calculate")
     }
   }
-  def apply(x: Int) = x*2
-  def unapply(z: Int): Option[Int] = if (z%2==0) Some(z/2) else None
+
+  def apply(x: Int): Int = x * 2
+
+  def unapply(z: Int): Option[Int] = if (z % 2 == 0) Some(z / 2) else None
 }
