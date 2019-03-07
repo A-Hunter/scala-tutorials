@@ -36,7 +36,6 @@ object EX3 {
     val addresses1: List[Address] = List(Address("City1"), Address("City2"), Address("City3"))
     val addresses2: List[Address] = List(Address("City4"), Address("City1"), Address("City6"))
     val addresses3: List[Address] = List(Address("City7"), Address("City8"), Address("City"))
-    //    addresses Address("City1")
     val peps = List[People](People(addresses1), People(addresses2), People(addresses3))
     val peps2 = List[People](People(addresses1), People(addresses2), People(addresses3))
     findPeopleIn("City1", peps)
