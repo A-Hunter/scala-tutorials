@@ -8,5 +8,7 @@ case class FirstRectangle(h: Int, w: Int) extends Surface {
 
   override val height: Int = h
   override val width: Int = w
+  // We need to override the area in order to have the product of height and width , otherwise
+  //  we will have 'area = 0' because it is already initialized at 0 in the trait Surface
   override val area: Int = height * width
 }
