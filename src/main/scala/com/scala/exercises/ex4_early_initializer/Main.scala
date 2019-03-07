@@ -12,5 +12,8 @@ object Main {
 
     val second = SecondRectangle(10, 3)
     println("Area : " + second.area)
+
+    val third = ThirdRectangle(10, 3)
+    println("Area : " + third.area)
   }
 }
