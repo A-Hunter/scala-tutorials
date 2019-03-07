@@ -1,4 +1,4 @@
-package com.scala.exercises.ex3
+package com.scala.exercises.ex3_for_yield
 
 import scala.collection.mutable.ListBuffer
 
