@@ -15,5 +15,8 @@ object Main {
 
     val third = ThirdRectangle(10, 3)
     println("Area : " + third.area)
+
+    val fourth = FourthRectangle(10, 3)
+    println("Area : " + fourth.area)
   }
 }
