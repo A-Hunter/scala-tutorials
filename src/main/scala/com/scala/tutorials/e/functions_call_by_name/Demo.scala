@@ -17,7 +17,15 @@ package com.scala.tutorials.e.functions_call_by_name
   */
 object Demo {
   def main(args: Array[String]) {
+    println(" >>> Call by name :")
     delayed(time())
+
+    println(" ------ ")
+    println(" >>> Call by value :")
+    println(callByValue(time()))
+    println(" ------ ")
+    println(" >>> Call by name :")
+    println(callByName(time()))
   }
 
   def time() = {
@@ -28,5 +36,21 @@ object Demo {
   def delayed(t: => Long) = {
     println("In delayed method") // 1st to be executed
     println("Param: " + t) // 4th to be executed
+  }
+
+  def callByValue(t: Long): Long = {
+    println("Entered callByValue, calling t ...")
+    println("t = " + t)
+    println("Calling t again ...")
+    t
+  }
+
+  //  The argument t is not evaluated at the point of function application, but instead is evaluated at each use within
+  //    the function. That is, the argument is evaluated using call-by-name
+  def callByName(t: => Long): Long = {
+    println("Entered callByName, calling t ...")
+    println("t = " + t)
+    println("Calling t again ...")
+    t
   }
 }
