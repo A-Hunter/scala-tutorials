@@ -9,6 +9,7 @@ package com.scala.tutorials.f.function_with_variable_arguments
   * This allows clients to pass variable length argument lists to the function.
   * Here, the type of args inside the print Strings function, which is declared as type
   * "String*" is actually Array[String].
+  * In Java : "String... args"
   */
 object Demo {
   def main(args: Array[String]) {
