@@ -12,7 +12,9 @@ package com.scala.tutorials.j.functions_with_named_arguments
   */
 object Demo {
   def main(args: Array[String]) {
-    printInt(b = 5, a = 7)
+    printInt(b = 5, a = 7) // a = 7 & b = 5
+//    printInt(5, a = 7) // Error : a is already specified a = 7
+    printInt(5, b = 7) // a = 5 & b = 7
   }
 
   def printInt(a: Int, b: Int) = {
