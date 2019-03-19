@@ -1,4 +1,4 @@
-package com.scala.lang.org.traits
+package com.scala.lang.org.b.traits
 
 /**
   * Created by Ghazi Naceur on 19/03/2019

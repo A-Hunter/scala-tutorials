@@ -1,4 +1,4 @@
-package com.scala.lang.org.classes
+package com.scala.lang.org.a.classes
 
 /**
   * Created by Ghazi Naceur on 19/03/2019
