@@ -26,10 +26,12 @@ object Demo {
     println("capitals.get(\"France\") : " + capitals.get("France"))
     println("capitals.get(\"India\") : " + capitals.get("India"))
 
-    def show(x: Option[String]) = x match {
+    def show(x: Option[Any]) = x match {
       case Some(s) => s
       case None => "?"
     }
+
+    List(Some("2"), Some(5), None).foreach(x => println(show(x)))
 
     val a: Option[Int] = Some(5)
     val b: Option[Int] = None

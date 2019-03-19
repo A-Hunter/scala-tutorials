@@ -25,9 +25,9 @@ package com.scala.tutorials.v.extractors
   */
 object Demo {
   def main(args: Array[String]) {
-    println("Apply method : " + apply("Zara", "gmail.com"));
-    println("Unapply method : " + unapply("Zara@gmail.com"));
-    println("Unapply method : " + unapply("Zara Ali"));
+    println("Apply method : " + apply("Zara", "gmail.com"))
+    println("Unapply method : " + unapply("Zara@gmail.com"))
+    println("Unapply method : " + unapply("Zara Ali"))
   }
 
   // The injection method (optional)

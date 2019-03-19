@@ -22,6 +22,7 @@ object Demo {
     println(matchTest2("two"))
     println(matchTest2("test"))
     println(matchTest2(1))
+    println(matchTest2(5))
 
     val alice = Person("Alice", 25)
     val bob = Person("Bob", 32)

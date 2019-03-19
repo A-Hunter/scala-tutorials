@@ -20,10 +20,10 @@ object Demo {
 
     t.productIterator.foreach { i => println("Value = " + i) }
 
-    val tup = new Tuple3(1, "hello", Console)
+    val tup = Tuple3(1, "hello", Console)
     println("Concatenated String: " + tup.toString())
 
-    val tuple = new Tuple2("Scala", "hello")
+    val tuple = Tuple2("Scala", "hello")
     println("Swapped Tuple: " + tuple.swap)
   }
 }

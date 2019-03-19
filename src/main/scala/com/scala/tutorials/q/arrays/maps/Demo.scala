@@ -20,7 +20,7 @@ object Demo {
     println("colors1 ++ colors2 : " + colors3)
     // use two maps with .++ as method
     colors3 = colors1.++(colors2)
-    println("colors1.++(colors2)) : " + colors3)
+    println("colors1.++(colors2) : " + colors3)
 
     colors.keys.foreach { i =>
       print("Key = " + i)

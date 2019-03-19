@@ -53,7 +53,7 @@ object Demo {
     println("mul : " + mul)
 
     val sum = numbers.reduce(_ + _) // equivalent to "sum"
-    val sum2 = numbers.sum // equivalent to "sum"
+    val sum2 = numbers.sum
     println("The sum of 1+2+3+4 = " + sum)
     println("The sum of 1+2+3+4 = " + sum2)
 
