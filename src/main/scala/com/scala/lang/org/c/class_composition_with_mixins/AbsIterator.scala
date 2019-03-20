@@ -7,11 +7,11 @@ package com.scala.lang.org.c.class_composition_with_mixins
 
 /**
   *
-trait Iterator[A] {
+trait AbsIterator[A] {
   def hasNext: Boolean
   def next(): A
 }
-
+  It is the same as :
   */
 trait AbsIterator {
   type A
@@ -46,6 +46,7 @@ object AbsIterator {
 
     val iter = new RichStringIter
     iter foreach println
-
+//     It is the same as :
+//    iter.foreach(x => println(x))
   }
 }
