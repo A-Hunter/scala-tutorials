@@ -6,6 +6,10 @@ import scala.util.Random
   * Created by Ghazi Naceur on 22/03/2019
   * Email: ghazi.ennacer@gmail.com
   */
+
+// Scala’s pattern matching statement is most useful for matching on algebraic types
+// expressed via case classes. Scala also allows the definition of patterns
+// independently of case classes, using unapply methods in extractor objects.
 object PatternMatching extends App {
 
   val x: Int = Random.nextInt(10)
