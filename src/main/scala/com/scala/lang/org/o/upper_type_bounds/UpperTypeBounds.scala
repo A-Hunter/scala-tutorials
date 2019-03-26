@@ -31,7 +31,7 @@ class PetContainer[P <: Pet](p: P) {
 object UpperTypeBounds extends App {
   val dogContainer = new PetContainer[Dog](new Dog)
   val catContainer = new PetContainer[Cat](new Cat)
-  val lionContainer = new PetContainer[Lion](new Lion)
+//  val lionContainer = new PetContainer[Lion](new Lion)
   //                         ^this would not compile
 
   //  The class PetContainer take a type parameter P which must be a subtype of Pet. Dog and Cat are subtypes
