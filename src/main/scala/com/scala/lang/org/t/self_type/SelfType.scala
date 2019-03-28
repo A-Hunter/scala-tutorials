@@ -5,6 +5,14 @@ package com.scala.lang.org.t.self_type
   * Email: ghazi.ennacer@gmail.com
   */
 
+//  Self-types are a way to declare that a trait must be mixed into another trait, even though it
+// doesn’t directly extend it. That makes the members of the dependency available without imports.
+
+//  A self-type is a way to narrow the type of this or another identifier that aliases this. The syntax
+// looks like normal function syntax but means something entirely different.
+
+//  To use a self-type in a trait, write an identifier, the type of another trait to mix in,
+// and a => (e.g. someIdentifier: SomeOtherTrait =>)
 trait User {
   def username: String
 }
