@@ -27,6 +27,8 @@ object ThreadCommunication extends App {
     }
   }
 
+  ///////////////////////// Part 1
+
   def naiveProdCons(): Unit = {
     val container = new SimpleContainer
 
@@ -70,6 +72,8 @@ object ThreadCommunication extends App {
   If you want to signal/awaken all available threads, you can use "notifyAll()".
   */
 
+  ///////////////////////// Part 2
+
   def smartProdCons(): Unit = {
     val container = new SimpleContainer
 
@@ -99,5 +103,52 @@ object ThreadCommunication extends App {
 
   smartProdCons()
 
+  ///////////////////////// Part 3
 
+  def prodConsLargeBuffer(): Unit = {
+    val buffer: mutable.Queue[Int] = new mutable.Queue[Int]
+    val capacity = 3
+
+    val consumer = new Thread(() => {
+      val random = new Random()
+      while(true) {
+        buffer.synchronized {
+          if (buffer.isEmpty) {
+            println("[consumer] empty buffer, waiting...")
+            buffer.wait()
+          }
+          // There must be at least 1 value in the buffer
+          val x = buffer.dequeue()
+          println("[consumer] I consumed : "+ x)
+          buffer.notify() // notify the producer that the consumer has consumed a value (so the producer can produce if it's in sleep mode)
+        }
+        Thread.sleep(random.nextInt(500))
+      }
+    })
+
+    val producer = new Thread(() => {
+      val random = new Random()
+      var i = 0
+
+      while(true) {
+        buffer.synchronized {
+          if (buffer.size == capacity) {
+            println("[producer] buffer is full, waiting...")
+            buffer.wait()
+          }
+          // There must be at least 1 empty space to produce a value
+          println("[producer] producing : "+ i)
+          buffer.enqueue(i)
+          buffer.notify() // notify the consumer that the producer is done producing (so it can consumer again if it was in sleep mode earlier)
+          i += 1
+        }
+        Thread.sleep(random.nextInt(500))
+      }
+    })
+
+    consumer.start()
+    producer.start()
+  }
+
+  prodConsLargeBuffer()
 }
