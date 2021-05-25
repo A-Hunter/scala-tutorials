@@ -151,4 +151,56 @@ object ThreadCommunication extends App {
   }
 
   prodConsLargeBuffer()
+
+  ///////////////////////// Part 4
+
+  class Consumer(id: Int, buffer: mutable.Queue[Int]) extends Thread {
+    override def run(): Unit = {
+      val random = new Random()
+      while(true) {
+        buffer.synchronized {
+          while (buffer.isEmpty) {
+            println(s"[consumer $id] empty buffer, waiting...")
+            buffer.wait()
+          }
+          val x = buffer.dequeue()
+          println(s"[consumer $id] I consumed : "+ x)
+          buffer.notify()
+        }
+        Thread.sleep(random.nextInt(500))
+      }
+    }
+  }
+
+  class Producer(id: Int, buffer: mutable.Queue[Int], capacity: Int) extends Thread {
+    override def run(): Unit = {
+      val random = new Random()
+      var i = 0
+
+      while(true) {
+        buffer.synchronized {
+          while (buffer.size == capacity) {
+            println(s"[producer $id] buffer is full, waiting...")
+            buffer.wait()
+          }
+          // There must be at least 1 empty space to produce a value
+          println(s"[producer $id] producing : "+ i)
+          buffer.enqueue(i)
+          buffer.notify()
+          i += 1
+        }
+        Thread.sleep(random.nextInt(500))
+      }
+    }
+  }
+
+  def multiProdCons(nbConsumers: Int, nbProducers: Int): Unit = {
+    val buffer = new mutable.Queue[Int]
+    val capacity = 3
+
+    (1 to nbConsumers).foreach(nb => new Consumer(nb, buffer).start())
+    (1 to nbProducers).foreach(nb => new Producer(nb, buffer, capacity).start())
+  }
+
+  multiProdCons(3, 3)
 }
