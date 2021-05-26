@@ -1,6 +1,6 @@
 package com.scala.advanced.adv_10_futures_and_promises
 
-import scala.concurrent.{Await, Future, Promise}
+import scala.concurrent.Promise
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.util.Success
 object Promises extends App {
