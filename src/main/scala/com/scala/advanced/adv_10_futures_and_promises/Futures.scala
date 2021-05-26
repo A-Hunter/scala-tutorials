@@ -1,12 +1,12 @@
 package com.scala.advanced.adv_10_futures_and_promises
 
-import com.scala.advanced.adv_10_futures_and_promises.FuturesPromises.SocialNetwork.{fetchBestFriends, names}
+import com.scala.advanced.adv_10_futures_and_promises.Futures.SocialNetwork.{fetchBestFriends, names}
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 import scala.util.{Failure, Random, Success}
 
-object FuturesPromises extends App {
+object Futures extends App {
 
   def calculate: Int = {
     Thread.sleep(2000)
@@ -102,6 +102,4 @@ object FuturesPromises extends App {
 
   // 3- fallbackTo :
   val fallbackRes = SocialNetwork.fetchProfile("unknown id").fallbackTo(SocialNetwork.fetchProfile("id.dummy"))
-
-
 }
