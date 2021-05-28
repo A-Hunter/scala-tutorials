@@ -60,15 +60,24 @@ object TypeClasses extends App {
   println(HTMLSerializer[Int].serialize(56)) // We're apply to specify the Type "Int" here, because we're using "apply" method
   // inside the companion object, which surfaced out the serializer (the implicit instance) => Access to the entire type class interface
 
+  //////////////////////////////////////////////////////////////////////////////////////////////////
+//  Steps to create an implicit
+  // Step 1 : Type class
   trait MyTypeClassTemplate[T] {
     def action(value: T): String
   }
 
+  // Step 2 : Type class instances (often implicit)
+  implicit object MyTypeClassInstance extends MyTypeClassTemplate[Int] {
+    override def action(value: Int): String = String.valueOf(value)
+  }
+
+  // Step 3 : Invoking type class instances
   object MyTypeClassTemplate {
     def apply[T](implicit instance: MyTypeClassTemplate[T]) = instance
   }
 
-  // Part 3
+  // Step 4 : Enriching types with types classes
   implicit class HTMLEnrichment[T](value: T) {
     def toHTML(implicit serializer: HTMLSerializer[T]): String = serializer.serialize(value)
   }
@@ -77,6 +86,7 @@ object TypeClasses extends App {
   // Equivalent to :
   println(isaac.toHTML)
   println(2.toHTML)
+  //////////////////////////////////////////////////////////////////////////////////////////////////
 
   /*
   - Extend to new type
