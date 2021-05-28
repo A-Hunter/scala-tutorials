@@ -57,12 +57,12 @@ object TypeMembers extends App {
 //    def tail = tl
 //  }
 
-  // OK
-  class IntList(hd: Int, tl: IntList) extends MList with ApplicableToNumbers {
-    type A = Int
-    def head = hd
-    def tail = tl
-  }
+//  // OK
+//  class IntList(hd: Int, tl: IntList) extends MList with ApplicableToNumbers {
+//    type A = Int
+//    def head = hd
+//    def tail = tl
+//  }
 
 
 }
