@@ -37,7 +37,7 @@ object StructuralTypes extends App {
 
   def closeAgain(advancedCloseable: AdvancedCloseable): Unit = advancedCloseable.closeSilently()
 
-  closeAgain(new AdvancedCloseable)
+//  closeAgain(new AdvancedCloseable)
 //  closeAgain(new HipsterCloseable) // won't compile because it doesn't originate from JavaCloseable
 
   // Using structural types as standalone types
